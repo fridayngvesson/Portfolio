@@ -1,0 +1,220 @@
+:root {
+    --clr-primary: rgb(69, 11, 21);
+    --clr-secondary: rgb(255, 255, 255);;
+    --clr-accent: white;
+
+    --clr-body-h: black;
+    --clr-body-p: black;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* General link styling */
+* a {
+    text-decoration: none; /* Removes underline */
+    color: var(--clr-secondary); /* Default link color */
+    font-weight: 500; /* Slightly bolder text for emphasis */
+}
+
+/* Hover state: changes color on hover */
+a:hover {
+    color: rgb(219, 112, 147); /* Darker shade for hover */
+    text-decoration: underline; /* Adds underline for clarity */
+}
+
+/* Active state: when the link is being clicked */
+a:active {
+    color: rgb(139, 0, 70); /* Even darker shade for active */
+    text-decoration: none; /* No underline when active */
+}
+
+/* Visited state: styling for links that have been clicked */
+a:visited {
+    color: rgb(255, 255, 255); /* A subtle gray for visited links */
+}
+
+/* Focus state: for keyboard navigation (accessibility) */
+a:focus {
+    outline: 2px dashed var(--clr-secondary); /* Adds a focus outline */
+    outline-offset: 0.7rem; /* Keeps outline slightly away from the text */
+}
+
+
+body {
+    font-family: "cormorant garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 1rem;
+
+    @media (width > 768px) {
+        max-width: 720px;
+    }
+    @media (width > 992px) {
+        max-width: 960px;
+    }
+    @media (width > 1200px) {
+        max-width: 1140px;
+    }
+    @media (width > 1400px) {
+        max-width: 1320px;
+    }
+}
+
+.main-background-clr {
+    background-color: var(--clr-primary);
+    padding-block: .5rem;
+    
+   
+}
+
+/* Allmänt för headern */
+.full-width-header {
+    width: 99%; /* Gör headern lika bred som viewport */
+    margin: 0 auto; /* Centers the div horizontally */
+    height: 100svh; /* Ställ in höjden (justera efter behov) */
+    padding-top: 2rem;
+    background-image: url("Images/satin-brown\ copy.jpg"); /* Lägg till din bakgrundsbild */
+    background-size: cover; /* Gör så att bilden täcker hela ytan */
+    background-position: center; /* Centrera bilden */
+    background-repeat: no-repeat; /* Undvik att bilden upprepas */
+    transition: background-position 0.1s ease; /* Lägger till en smidig övergång för bakgrundspositionen */
+    border-radius: 2rem;
+    position: relative; /* För att kunna centrera det inre innehållet */
+}
+
+.full-width-header.warped {
+    filter: blur(5px) brightness(0.8); /* Skapa en suddig effekt när bakgrunden förvrängs */
+}
+
+
+
+/* Ny div för centrerad text */
+.header-content {
+    position: absolute; /* Gör att den kan positioneras relativt föräldern */
+    top: 50%; /* Positionera vertikalt i mitten */
+    left: 50%; /* Positionera horisontellt i mitten */
+    transform: translate(-50%, -50%); /* Justera så att den verkligen är centrerad */
+    text-align: center; /* Centrerar texten horisontellt */
+    color: white; /* Vit textfärg så den syns på mörk bakgrund */
+}
+
+.header-content h1 {
+    font-size: 3rem; /* Större rubrik */
+    margin-bottom: 1rem; /* Utrymme under rubriken */
+    font-weight: 100;
+    line-height: 2.3rem;
+    
+}
+
+.header-content p {
+    font-size: 1.5rem; /* Lite mindre text */
+    font-family: "roboto", serif;
+    font-weight: 100;
+    
+}
+
+
+
+.navbar {
+    display: flex;
+    margin-bottom: 4rem;
+    /* color: rgb(255, 255, 255); */
+    justify-content: space-between; /* Utrymme mellan länkar och knapp */
+    align-items: center;
+
+    a {
+        font-size: 2rem; 
+        font-weight: 100;
+    }
+}
+
+.main-nav {
+    margin-inline: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    
+    a {
+        margin-inline: 1rem;
+        
+    }
+    
+}
+
+.btn-contact {
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    font-size: 1.5rem;
+    font-family: "cormorant garamond", serif;
+    padding: .9rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-contact:hover {
+    background-color: var(--clr-secondary); /* Ändrar bakgrundsfärgen vid hover */
+    color: var(--clr-primary); /* Ändrar textfärgen vid hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smidig övergång */
+}
+
+
+/* Disabled link (if necessary) */
+/* a[disabled] {
+    color: #aaa;
+    pointer-events: none;
+    cursor: not-allowed; 
+} */
+
+.contact-section {
+    padding-block: 2rem;
+    font-size: 2rem;
+
+
+}
+
+.lined-div-bottom{
+    padding-block: 1rem;
+    border-bottom: .2rem solid white;
+}
+
+.lined-div-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Valfritt för att skapa mellanrum */
+    padding-block: 1rem;
+
+    border-top: .2rem solid white;
+}
+
+.lined-div-top a {
+    text-decoration: none; /* Valfritt för att ta bort understrykning */
+  
+}
+
+
+
+
+
+
+@media (max-width: 576px ) {
+    /* Header */
+    .navbar {
+        display: none;
+       
+    }
+
+}
+
+
+

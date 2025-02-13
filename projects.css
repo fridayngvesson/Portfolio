@@ -1,0 +1,140 @@
+/* Small header */
+.main-background-clr-small {
+    background-color: var(--clr-primary);
+    padding-block: .7rem;
+   
+}
+.small-header {
+    width: 99%; /* Gör headern lika bred som viewport */
+    margin: 0 auto; /* Centers the div horizontally */
+    height: 18svh; /* Ställ in höjden (justera efter behov) */
+    padding-top: 2rem;
+    background-image: url("Images/satin-brown\ copy.jpg"); /* Lägg till din bakgrundsbild */
+    background-size: cover; /* Gör så att bilden täcker hela ytan */
+    background-position: center; /* Centrera bilden */
+    background-repeat: no-repeat; /* Undvik att bilden upprepas */
+    transition: background-position 0.1s ease; /* Lägger till en smidig övergång för bakgrundspositionen */
+    position: relative; /* För att kunna centrera det inre innehållet */
+}
+
+
+
+.card-container {
+    display: flex; /* Använder flexbox */
+    justify-content: center; 
+    align-items: center; /* Centrerar korten vertikalt (om höjden varierar) */
+    gap: .5rem; /* Mellanrum mellan korten */
+    margin: 1rem auto; 
+    flex-wrap: wrap; /* Gör att korten bryts till nästa rad om det inte finns plats */
+    
+}
+
+.card-wrapper {
+    overflow: hidden; /* Prevents overflow into the footer */
+    padding: 1rem; /* Adds padding around the card container */
+   
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 450px;
+    height: 350px;
+    perspective: 1000px; /* Behåller 3D-effekten */
+    margin: .5rem; /* Försäkra att det finns lite extra marginal */
+   
+    
+    
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color:  rgba(221, 96, 117, 0.232);
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.flip-card-back h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.flip-card-back p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+/* Projects */
+.projects {
+    background-color: var(--clr-primary);
+  
+    display: flex; /* Gör sektionen till en flex-container */
+    justify-content: center; /* Centrerar horisontellt */
+    align-items: center; /* Centrerar vertikalt */
+    margin: 0; /* Tar bort eventuell extra marginal */
+}
+.aby {
+    display: flex; /* Om du vill centrera innehåll inom denna behållare */
+    flex-wrap: wrap;
+    justify-content: center; /* Centrerar horisontellt */
+    align-items: center; /* Centrerar vertikalt */
+    
+    img {
+       width: 70%;
+    }
+}
+
+.voyago {
+    display: flex; /* Om du vill centrera innehåll inom denna behållare */
+    justify-content: center; /* Centrerar horisontellt */
+    align-items: center; /* Centrerar vertikalt */
+}
+
+.voyago-img {
+    width: 70%; /* Bevarar storlek */
+}
+
+
+/* Footer */
+
+footer {
+    background-image: url("Images/satin-brown\ copy.jpg"); /* Lägg till din bakgrundsbild */
+    background-size: cover; /* Gör så att bilden täcker hela ytan */
+    background-position: center; /* Centrera bilden */
+    background-repeat: no-repeat; /* Undvik att bilden upprepas */
+    transition: background-position 0.1s ease; /* Lägger till en smidig övergång för bakgrundspositionen */
+    position: relative; /* För att kunna centrera det inre innehållet */
+    padding-top: 1rem;
+}
